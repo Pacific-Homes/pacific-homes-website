@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacific Homes — Brand Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #111111;
+    --surface: #191919;
+    --surface2: #222222;
+    --border: #2a2a2a;
+    --text: #eeeeee;
+    --text-muted: #888888;
+    --primary: #644a40;
+    --primary-fg: #ffffff;
+    --secondary: #ffdfb5;
+    --secondary-fg: #582d1d;
+    --accent-warm: #ffdfb5;
+    --destructive: #e54d2e;
+    --label-color: #ffdfb5;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 64px 64px 80px;
+  }
+
+  /* ── HEADER ─────────────────────────────── */
+  .kit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+  }
+  .kit-header img { height: 36px; }
+  .kit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: var(--text);
+    text-transform: uppercase;
+  }
+  .kit-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .kit-meta span {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+  }
+  .kit-meta .dot { color: #444; }
+
+  /* ── SECTION LABEL ──────────────────────── */
+  .section-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--label-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  section { margin-bottom: 56px; }
+
+  /* ── 01 LOGO DESIGN ─────────────────────── */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .logo-cell {
+    border-radius: 8px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo-cell img { width: 100%; max-width: 120px; height: auto; }
+  .logo-cell-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .logo-cell.light { background: #f5f3ef; }
+  .logo-cell.light .logo-cell-label { color: #888; }
+  .logo-cell.navy { background: #1b2d3e; }
+  .logo-cell.navy .logo-cell-label { color: rgba(255,255,255,0.4); }
+  .logo-cell.warm { background: #f9f3ec; }
+  .logo-cell.warm .logo-cell-label { color: #888; }
+  .logo-cell.dark { background: #0c0c0c; }
+  .logo-cell.dark .logo-cell-label { color: rgba(255,255,255,0.3); }
+
+  /* ── 02 COLOR PALETTE ───────────────────── */
+  .palette-section { display: flex; flex-direction: column; gap: 36px; }
+
+  .palette-mode-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  .palette-row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+  }
+  .palette-row.dark-row {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .swatch {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .swatch-color {
+    height: 64px;
+    width: 100%;
+  }
+  .swatch-info {
+    background: var(--surface);
+    padding: 10px 12px;
+    border-top: 1px solid var(--border);
+  }
+  .swatch-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .swatch-token {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .swatch-hex {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    color: var(--accent-warm);
+  }
+
+  /* ── 03 TYPOGRAPHY ──────────────────────── */
+  .type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  .type-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px;
+  }
+  .type-card-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  .type-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+  }
+  .type-display em { color: var(--accent-warm); font-style: italic; }
+  .type-h1 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: var(--text); margin-bottom: 4px; letter-spacing: -0.01em; }
+  .type-h2 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; color: var(--text); margin-bottom: 16px; }
+  .type-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #aaaaaa;
+    margin-bottom: 12px;
+  }
+  .type-label-text {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+  }
+
+  .type-spec-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 32px;
+  }
+
+  .type-spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .type-spec-row:last-child { border-bottom: none; }
+  .type-spec-name { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+  .type-spec-value { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--accent-warm); }
+  .type-spec-sample { font-size: 13px; color: var(--text); }
+
+  .type-spec-sample.cormorant { font-family: 'Cormorant Garamond', serif; font-size: 18px; }
+  .type-spec-sample.inter { font-family: 'Inter', sans-serif; }
+  .type-spec-sample.mono { font-family: 'Roboto Mono', monospace; font-size: 11px; }
+
+  /* ── 04 UI COMPONENTS ───────────────────── */
+  .component-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .component-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+  }
+  .component-card-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  /* Buttons */
+  .btn-stack { display: flex; flex-direction: column; gap: 10px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary { background: #644a40; color: #ffffff; }
+  .btn-secondary { background: #ffdfb5; color: #582d1d; }
+  .btn-outline { background: transparent; color: var(--text); border: 1px solid #d8d8d8; }
+  .btn-ghost { background: transparent; color: var(--text-muted); }
+  .btn-destructive { background: #e54d2e; color: #ffffff; }
+
+  /* Badges */
+  .badge-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .badge-default { background: #2a2a2a; color: #eeeeee; }
+  .badge-primary { background: #644a40; color: #ffffff; }
+  .badge-secondary { background: #393028; color: #ffdfb5; }
+  .badge-success { background: rgba(34,197,94,0.15); color: #4ade80; }
+  .badge-warning { background: rgba(234,179,8,0.15); color: #facc15; }
+  .badge-destructive { background: rgba(229,77,46,0.15); color: #e54d2e; }
+
+  /* Form */
+  .form-stack { display: flex; flex-direction: column; gap: 10px; }
+  .input-wrap { display: flex; flex-direction: column; gap: 4px; }
+  .input-label { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.04em; }
+  .input-field {
+    background: var(--surface2);
+    border: 1px solid #484848;
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--text);
+    outline: none;
+  }
+  .input-field::placeholder { color: #555; }
+  .input-select {
+    background: var(--surface2);
+    border: 1px solid #484848;
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--text);
+    appearance: none;
+    width: 100%;
+  }
+
+  /* ── 05 DARK MODE TOKENS ────────────────── */
+  .tokens-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .token-table {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .token-table-header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    background: rgba(100,74,64,0.12);
+  }
+  .token-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    gap: 12px;
+  }
+  .token-row:last-child { border-bottom: none; }
+  .token-name {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    min-width: 140px;
+  }
+  .token-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .token-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.1);
+    flex-shrink: 0;
+  }
+  .token-hex {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    color: var(--accent-warm);
+  }
+
+  /* ── 06 BRAND VALUES ────────────────────── */
+  .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .value-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 24px;
+  }
+  .value-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(100,74,64,0.2);
+    border: 1px solid rgba(100,74,64,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .value-icon svg { width: 18px; height: 18px; }
+  .value-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .value-desc {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  /* ── 07 LOGO USAGE RULES ────────────────── */
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .rule-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+  }
+  .rule-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .rule-indicator {
+    width: 8px; height: 8px; border-radius: 50%;
+  }
+  .rule-indicator.do { background: #4ade80; }
+  .rule-indicator.dont { background: #e54d2e; }
+  .rule-card-title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .rule-card-title.do { color: #4ade80; }
+  .rule-card-title.dont { color: #e54d2e; }
+  .rule-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .rule-list li {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+  }
+  .rule-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #444;
+  }
+
+  /* ── FOOTER ─────────────────────────────── */
+  .kit-footer {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .kit-footer-logo img { height: 22px; opacity: 0.5; }
+  .kit-footer-text {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    color: #444;
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="kit-header">
+  <img src="pacific homes logos new/Pacific Homes Logo-02.png" alt="Pacific Homes" style="height:44px;">
+  <div class="kit-title">Brand Kit</div>
+  <div class="kit-meta">
+    <span>v2.0</span>
+    <span class="dot">·</span>
+    <span>2026</span>
+  </div>
+</header>
+
+<!-- 01 · LOGO DESIGN -->
+<section>
+  <div class="section-label">01 · Logo Design</div>
+  <div class="logo-grid">
+    <div class="logo-cell light">
+      <img src="pacific homes logos new/Pacific Homes Logo-01.png" alt="Logo on white">
+      <span class="logo-cell-label">Light Background</span>
+    </div>
+    <div class="logo-cell navy">
+      <img src="pacific homes logos new/Pacific Homes Logo-02.png" alt="Logo on navy">
+      <span class="logo-cell-label" style="color:rgba(255,255,255,0.4)">Dark Background</span>
+    </div>
+    <div class="logo-cell warm">
+      <img src="pacific homes logos new/Pacific Homes Logo-03.png" alt="Logo standard">
+      <span class="logo-cell-label">Warm Surface</span>
+    </div>
+    <div class="logo-cell dark">
+      <img src="pacific homes logos new/Pacific Homes Logo-04.png" alt="Logo on black">
+      <span class="logo-cell-label">Black Background</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · COLOR PALETTE — LIGHT MODE -->
+<section>
+  <div class="section-label">02 · Color Palette</div>
+  <div class="palette-section">
+
+    <div>
+      <div class="palette-mode-label">Light Mode</div>
+      <div class="palette-row">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#644a40;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Primary</div>
+            <div class="swatch-token">--primary</div>
+            <div class="swatch-hex">#644a40</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#ffdfb5;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Secondary</div>
+            <div class="swatch-token">--secondary</div>
+            <div class="swatch-hex">#ffdfb5</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#f9f9f9; border:1px solid #e0e0e0;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Background</div>
+            <div class="swatch-token">--background</div>
+            <div class="swatch-hex">#f9f9f9</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#202020;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Foreground</div>
+            <div class="swatch-token">--foreground</div>
+            <div class="swatch-hex">#202020</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#efefef;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Muted</div>
+            <div class="swatch-token">--muted</div>
+            <div class="swatch-hex">#efefef</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#e8e8e8;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Accent</div>
+            <div class="swatch-token">--accent</div>
+            <div class="swatch-hex">#e8e8e8</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#d8d8d8;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Border</div>
+            <div class="swatch-token">--border</div>
+            <div class="swatch-hex">#d8d8d8</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#e54d2e;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Destructive</div>
+            <div class="swatch-token">--destructive</div>
+            <div class="swatch-hex">#e54d2e</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="palette-mode-label">Dark Mode</div>
+      <div class="palette-row dark-row">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#ffe0c2;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Primary</div>
+            <div class="swatch-token">--primary</div>
+            <div class="swatch-hex">#ffe0c2</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#393028;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Secondary</div>
+            <div class="swatch-token">--secondary</div>
+            <div class="swatch-hex">#393028</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#111111;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Background</div>
+            <div class="swatch-token">--background</div>
+            <div class="swatch-hex">#111111</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#eeeeee;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Foreground</div>
+            <div class="swatch-token">--foreground</div>
+            <div class="swatch-hex">#eeeeee</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#222222;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Muted</div>
+            <div class="swatch-token">--muted</div>
+            <div class="swatch-hex">#222222</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#2a2a2a;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Accent</div>
+            <div class="swatch-token">--accent</div>
+            <div class="swatch-hex">#2a2a2a</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 03 · TYPOGRAPHY -->
+<section>
+  <div class="section-label">03 · Typography</div>
+  <div class="type-grid">
+
+    <div class="type-card">
+      <div class="type-card-label">Display / Headings — Cormorant Garamond</div>
+      <div class="type-display">Built to <em>Last.</em></div>
+      <div class="type-h1">Heading One</div>
+      <div class="type-h2">Heading Two</div>
+      <div class="type-body">We build more than structures — we build lasting relationships with our clients, crafting homes that stand as testaments to quality and care.</div>
+      <div class="type-label-text">LABEL · ROBOTO MONO</div>
+    </div>
+
+    <div class="type-spec-card">
+      <div class="type-card-label">Type Scale & Specifications</div>
+
+      <div class="type-spec-row">
+        <span class="type-spec-name">Display</span>
+        <span class="type-spec-sample cormorant">Aa</span>
+        <span class="type-spec-value">Cormorant Garamond / 600 / −0.02em</span>
+      </div>
+      <div class="type-spec-row">
+        <span class="type-spec-name">H1</span>
+        <span class="type-spec-value">48–64px / lh 1.05</span>
+      </div>
+      <div class="type-spec-row">
+        <span class="type-spec-name">H2</span>
+        <span class="type-spec-value">32–40px / lh 1.15</span>
+      </div>
+      <div class="type-spec-row">
+        <span class="type-spec-name">H3</span>
+        <span class="type-spec-value">24px / lh 1.25</span>
+      </div>
+      <div class="type-spec-row">
+        <span class="type-spec-name">Body</span>
+        <span class="type-spec-sample inter">Aa</span>
+        <span class="type-spec-value">Inter / 400 / 16px / lh 1.7</span>
+      </div>
+      <div class="type-spec-row">
+        <span class="type-spec-name">Small</span>
+        <span class="type-spec-value">14px / lh 1.6</span>
+      </div>
+      <div class="type-spec-row">
+        <span class="type-spec-name">Label</span>
+        <span class="type-spec-sample mono">Aa</span>
+        <span class="type-spec-value">Roboto Mono / 500 / 11px / 0.15em</span>
+      </div>
+      <div class="type-spec-row">
+        <span class="type-spec-name">Line length</span>
+        <span class="type-spec-value">65–75 ch max</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 04 · UI COMPONENTS -->
+<section>
+  <div class="section-label">04 · UI Components</div>
+  <div class="component-grid">
+
+    <div class="component-card">
+      <div class="component-card-label">Buttons</div>
+      <div class="btn-stack">
+        <button class="btn btn-primary">Get a Quote</button>
+        <button class="btn btn-secondary">View Projects</button>
+        <button class="btn btn-outline">Learn More</button>
+        <button class="btn btn-ghost">Dismiss</button>
+        <button class="btn btn-destructive">Remove</button>
+      </div>
+    </div>
+
+    <div class="component-card">
+      <div class="component-card-label">Badges &amp; States</div>
+      <div class="badge-stack">
+        <span class="badge badge-primary">Primary</span>
+        <span class="badge badge-secondary">Secondary</span>
+        <span class="badge badge-default">Default</span>
+      </div>
+      <div class="badge-stack">
+        <span class="badge badge-success">In Progress</span>
+        <span class="badge badge-warning">Pending</span>
+        <span class="badge badge-destructive">On Hold</span>
+      </div>
+      <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+        <span class="badge badge-default" style="border:1px solid #393028; background:transparent; color:#ffdfb5;">Residential Build</span>
+        <span class="badge badge-default" style="border:1px solid #393028; background:transparent; color:#ffdfb5;">Commercial</span>
+        <span class="badge badge-default" style="border:1px solid #393028; background:transparent; color:#ffdfb5;">Renovation</span>
+      </div>
+    </div>
+
+    <div class="component-card">
+      <div class="component-card-label">Form Elements</div>
+      <div class="form-stack">
+        <div class="input-wrap">
+          <label class="input-label">Full Name</label>
+          <input class="input-field" type="text" placeholder="John Smith">
+        </div>
+        <div class="input-wrap">
+          <label class="input-label">Email Address</label>
+          <input class="input-field" type="email" placeholder="john@example.com">
+        </div>
+        <div class="input-wrap">
+          <label class="input-label">Project Type</label>
+          <select class="input-select">
+            <option>Residential Build</option>
+            <option>Renovation</option>
+            <option>Commercial</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" style="width:100%; margin-top:4px;">Submit Enquiry</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 05 · DESIGN TOKENS -->
+<section>
+  <div class="section-label">05 · Design Tokens</div>
+  <div class="tokens-grid">
+
+    <div class="token-table">
+      <div class="token-table-header">Light Mode — Core Tokens</div>
+      <div class="token-row"><span class="token-name">--primary</span><div class="token-value"><div class="token-dot" style="background:#644a40;"></div><span class="token-hex">#644a40</span></div></div>
+      <div class="token-row"><span class="token-name">--primary-foreground</span><div class="token-value"><div class="token-dot" style="background:#ffffff; border-color:#ccc;"></div><span class="token-hex">#ffffff</span></div></div>
+      <div class="token-row"><span class="token-name">--secondary</span><div class="token-value"><div class="token-dot" style="background:#ffdfb5;"></div><span class="token-hex">#ffdfb5</span></div></div>
+      <div class="token-row"><span class="token-name">--secondary-foreground</span><div class="token-value"><div class="token-dot" style="background:#582d1d;"></div><span class="token-hex">#582d1d</span></div></div>
+      <div class="token-row"><span class="token-name">--background</span><div class="token-value"><div class="token-dot" style="background:#f9f9f9; border-color:#ddd;"></div><span class="token-hex">#f9f9f9</span></div></div>
+      <div class="token-row"><span class="token-name">--foreground</span><div class="token-value"><div class="token-dot" style="background:#202020;"></div><span class="token-hex">#202020</span></div></div>
+      <div class="token-row"><span class="token-name">--muted</span><div class="token-value"><div class="token-dot" style="background:#efefef;"></div><span class="token-hex">#efefef</span></div></div>
+      <div class="token-row"><span class="token-name">--muted-foreground</span><div class="token-value"><div class="token-dot" style="background:#646464;"></div><span class="token-hex">#646464</span></div></div>
+      <div class="token-row"><span class="token-name">--accent</span><div class="token-value"><div class="token-dot" style="background:#e8e8e8;"></div><span class="token-hex">#e8e8e8</span></div></div>
+      <div class="token-row"><span class="token-name">--border</span><div class="token-value"><div class="token-dot" style="background:#d8d8d8;"></div><span class="token-hex">#d8d8d8</span></div></div>
+      <div class="token-row"><span class="token-name">--input</span><div class="token-value"><div class="token-dot" style="background:#d8d8d8;"></div><span class="token-hex">#d8d8d8</span></div></div>
+      <div class="token-row"><span class="token-name">--ring</span><div class="token-value"><div class="token-dot" style="background:#644a40;"></div><span class="token-hex">#644a40</span></div></div>
+      <div class="token-row"><span class="token-name">--destructive</span><div class="token-value"><div class="token-dot" style="background:#e54d2e;"></div><span class="token-hex">#e54d2e</span></div></div>
+      <div class="token-row"><span class="token-name">--radius</span><div class="token-value"><span class="token-hex">0.5rem</span></div></div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <div class="token-table">
+        <div class="token-table-header">Dark Mode — Core Tokens</div>
+        <div class="token-row"><span class="token-name">--primary</span><div class="token-value"><div class="token-dot" style="background:#ffe0c2;"></div><span class="token-hex">#ffe0c2</span></div></div>
+        <div class="token-row"><span class="token-name">--primary-foreground</span><div class="token-value"><div class="token-dot" style="background:#081a1b;"></div><span class="token-hex">#081a1b</span></div></div>
+        <div class="token-row"><span class="token-name">--secondary</span><div class="token-value"><div class="token-dot" style="background:#393028;"></div><span class="token-hex">#393028</span></div></div>
+        <div class="token-row"><span class="token-name">--secondary-foreground</span><div class="token-value"><div class="token-dot" style="background:#ffe0c2;"></div><span class="token-hex">#ffe0c2</span></div></div>
+        <div class="token-row"><span class="token-name">--background</span><div class="token-value"><div class="token-dot" style="background:#111111;"></div><span class="token-hex">#111111</span></div></div>
+        <div class="token-row"><span class="token-name">--foreground</span><div class="token-value"><div class="token-dot" style="background:#eeeeee;"></div><span class="token-hex">#eeeeee</span></div></div>
+        <div class="token-row"><span class="token-name">--muted</span><div class="token-value"><div class="token-dot" style="background:#222222;"></div><span class="token-hex">#222222</span></div></div>
+        <div class="token-row"><span class="token-name">--accent</span><div class="token-value"><div class="token-dot" style="background:#2a2a2a;"></div><span class="token-hex">#2a2a2a</span></div></div>
+        <div class="token-row"><span class="token-name">--border</span><div class="token-value"><div class="token-dot" style="background:#201e18;"></div><span class="token-hex">#201e18</span></div></div>
+        <div class="token-row"><span class="token-name">--input</span><div class="token-value"><div class="token-dot" style="background:#484848;"></div><span class="token-hex">#484848</span></div></div>
+        <div class="token-row"><span class="token-name">--ring</span><div class="token-value"><div class="token-dot" style="background:#ffe0c2;"></div><span class="token-hex">#ffe0c2</span></div></div>
+        <div class="token-row"><span class="token-name">--card</span><div class="token-value"><div class="token-dot" style="background:#191919;"></div><span class="token-hex">#191919</span></div></div>
+      </div>
+
+      <div class="token-table">
+        <div class="token-table-header">Chart Palette</div>
+        <div class="token-row"><span class="token-name">--chart-1</span><div class="token-value"><div class="token-dot" style="background:#644a40;"></div><span class="token-hex">#644a40 · #ffe0c2</span></div></div>
+        <div class="token-row"><span class="token-name">--chart-2</span><div class="token-value"><div class="token-dot" style="background:#ffdfb5;"></div><span class="token-hex">#ffdfb5 · #393028</span></div></div>
+        <div class="token-row"><span class="token-name">--chart-3</span><div class="token-value"><div class="token-dot" style="background:#e8e8e8;"></div><span class="token-hex">#e8e8e8 · #2a2a2a</span></div></div>
+        <div class="token-row"><span class="token-name">--chart-4</span><div class="token-value"><div class="token-dot" style="background:#ffe6c4;"></div><span class="token-hex">#ffe6c4 · #42382e</span></div></div>
+        <div class="token-row"><span class="token-name">--chart-5</span><div class="token-value"><div class="token-dot" style="background:#66493e;"></div><span class="token-hex">#66493e · #ffe0c1</span></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 06 · BRAND VALUES -->
+<section>
+  <div class="section-label">06 · Brand Values</div>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffdfb5" stroke-width="1.5" stroke-linecap="round">
+          <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <div class="value-name">Trustworthy</div>
+      <div class="value-desc">Communication that is always honest, direct, and transparent — no surprises, no shortcuts.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffdfb5" stroke-width="1.5" stroke-linecap="round">
+          <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+        </svg>
+      </div>
+      <div class="value-name">Precise</div>
+      <div class="value-desc">Construction demands precision in craftsmanship. We hold every detail to the highest standard.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffdfb5" stroke-width="1.5" stroke-linecap="round">
+          <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1V10"/>
+        </svg>
+      </div>
+      <div class="value-name">Grounded</div>
+      <div class="value-desc">Rooted in practicality and proven methods, we build for the long term with no pretence.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffdfb5" stroke-width="1.5" stroke-linecap="round">
+          <path d="M12 3v1m0 16v1M4.22 4.22l.71.71m14.14 14.14l.71.71M1 12h2m18 0h2M4.22 19.78l.71-.71M18.36 5.64l.71-.71"/>
+        </svg>
+      </div>
+      <div class="value-name">Enduring</div>
+      <div class="value-desc">The homes we build are meant to last for generations. Durability is never optional.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 · LOGO USAGE RULES -->
+<section>
+  <div class="section-label">07 · Logo Usage Rules</div>
+  <div class="rules-grid">
+    <div class="rule-card">
+      <div class="rule-card-header">
+        <div class="rule-indicator do"></div>
+        <div class="rule-card-title do">Do</div>
+      </div>
+      <ul class="rule-list">
+        <li>Always maintain clear space equal to the height of the "P" in PACIFIC on all sides</li>
+        <li>Use the white-background logo on light/warm backgrounds</li>
+        <li>Use the dark-background logo on dark or coloured backgrounds</li>
+        <li>Maintain the original aspect ratio at all times</li>
+        <li>Minimum display size: approximately 100px (digital) / 25mm (print)</li>
+        <li>Use high-resolution PNG or vector source files</li>
+      </ul>
+    </div>
+    <div class="rule-card">
+      <div class="rule-card-header">
+        <div class="rule-indicator dont"></div>
+        <div class="rule-card-title dont">Don't</div>
+      </div>
+      <ul class="rule-list">
+        <li>Never alter, recolor, or apply effects to the logo</li>
+        <li>Never stretch or distort the logo proportions</li>
+        <li>Never place the logo on busy photographic backgrounds without overlay</li>
+        <li>Never rotate or flip the logo in any direction</li>
+        <li>Never recreate or approximate the logo in alternate fonts</li>
+        <li>Never use the logo at a size that makes it illegible</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="kit-footer">
+  <div class="kit-footer-logo">
+    <img src="pacific homes logos new/Pacific Homes Logo-02.png" alt="Pacific Homes">
+  </div>
+  <div class="kit-footer-text">© 2026 PACIFIC HOMES · BRAND IDENTITY SYSTEM V2.0</div>
+</footer>
+
+</body>
+</html>
