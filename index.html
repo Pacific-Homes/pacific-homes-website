@@ -2252,6 +2252,133 @@ footer {
   .duplex-opener-text h2 { font-size: 32px; }
 }
 
+/* ══════════════════════════════════════════
+   MOBILE — Comprehensive fixes
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Make all content visible on mobile (disable fade-up animation) ── */
+  .fade-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+  }
+  .fade-up.visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* ── Container padding ── */
+  .container { padding: 0 20px; }
+  .nav-inner { padding: 0 20px; }
+
+  /* ── Hero ── */
+  #hero { min-height: 100svh; }
+  .hero-center-text h1 {
+    font-size: clamp(52px, 14vw, 80px);
+    letter-spacing: 0.04em;
+  }
+  .hero-eyebrow { font-size: 9.5px; letter-spacing: 0.22em; }
+  .hero-scroll { display: none; }
+
+  /* ── Cred bar ── */
+  .cred-inner { padding: 0 20px; }
+  .cred-item { padding: 18px 0; }
+
+  /* ── Section headings ── */
+  .section-header { margin-bottom: 36px; }
+  .section-header h2 { font-size: clamp(28px, 7vw, 38px); margin-bottom: 12px; }
+  .section-header p { font-size: 15px; }
+
+  /* ── Services section ── */
+  #services { padding: 60px 0 52px; }
+  .feature-cards-row { gap: 16px; margin-bottom: 36px; }
+  .fc-img-wrap { height: 200px; }
+  .fc-body { padding: 20px 22px 24px; }
+  .fc-title { font-size: 19px; }
+  .svc-reno-divider { padding: 28px 0 20px; }
+  .svc-card { padding: 28px 24px; }
+  .svc-name { font-size: 19px; }
+  .svc-desc { font-size: 14px; }
+
+  /* ── Portfolio ── */
+  #portfolio { padding: 56px 0 52px; }
+  .port-item img { height: 220px; }
+
+  /* ── Laneway section ── */
+  .laneway-opener { padding: 72px 0 56px; }
+  .laneway-opener-text h2 { font-size: clamp(30px, 8vw, 44px); margin-bottom: 20px; }
+  .laneway-opener-text .lw-sub { font-size: 15px; }
+  .laneway-stats { padding: 40px 0; }
+  .stats-row { padding: 0 20px; gap: 0; }
+  .stat-val { font-size: clamp(24px, 6vw, 34px); }
+  .laneway-why { padding: 56px 0 44px; }
+  .shader-card { height: auto; min-height: 180px; }
+  .shader-card-sm { height: auto; min-height: 150px; }
+  .shader-card-content { height: auto; }
+  .shader-card-bg { height: 100%; min-height: 180px; }
+  .lw-steps-row { gap: 0; }
+  .lw-step { padding: 28px 20px; }
+  .lw-step-title { font-size: 16px; }
+  .lw-step-desc { font-size: 13.5px; }
+  .elig-img { min-height: 220px; }
+  .elig-text { padding: 36px 20px; }
+  .laneway-cta { padding: 56px 0; }
+  .laneway-cta h3 { font-size: clamp(22px, 6vw, 30px); }
+
+  /* ── Duplex section ── */
+  .duplex-opener { padding: 72px 0 56px; }
+  .duplex-opener-text h2 { font-size: clamp(28px, 7.5vw, 44px); }
+  .duplex-opener-text .lw-sub { font-size: 15px; }
+  .duplex-callout { padding: 28px 20px; }
+  .duplex-callout-title { font-size: 18px; }
+  .comparison-section { padding: 56px 0; }
+  .comparison-card { padding: 32px 24px; }
+  .comparison-card h3 { font-size: 22px; }
+  .benefits-grid { gap: 14px; }
+  .timeline-6 { gap: 14px !important; }
+  .benefit-title { font-size: 18px; }
+  .sc-desc { font-size: 15px; }
+
+  /* ── About / Process section ── */
+  #process { padding: 60px 0 52px; }
+  .about-grid { margin-bottom: 44px; }
+  .about-img-wrap img { height: 260px; }
+  .about-service-title { font-size: 17px; }
+  .about-service-desc { font-size: 13px; padding-left: 0; margin-top: 6px; }
+  .about-stats { gap: 12px; }
+  .about-stat { padding: 20px 16px; }
+  .about-stat-value { font-size: clamp(26px, 7vw, 36px); }
+
+  /* ── Testimonials ── */
+  #testimonials .test-inner { padding: 56px 0 52px !important; }
+  .test-carousel { min-height: auto; padding: 0 16px; }
+  .test-quote { font-size: 16px; line-height: 1.68; }
+  .test-nav { margin-top: 28px; }
+
+  /* ── Contact ── */
+  #contact { padding: 60px 0 72px; }
+  .contact-layout { gap: 36px; }
+  .contact-left h2 { font-size: clamp(28px, 7vw, 38px); }
+  .contact-sub { font-size: 14px; margin-bottom: 36px; }
+
+  /* ── Footer ── */
+  footer { padding: 44px 0 0; }
+  .footer-logo-img { height: 44px; }
+}
+
+@media (max-width: 520px) {
+  /* Extra small screens */
+  .container { padding: 0 16px; }
+  .nav-inner { padding: 0 16px; }
+  .hero-center-text h1 { font-size: clamp(44px, 13vw, 68px); }
+  .primary-svc-content { padding: 28px 24px; }
+  .primary-svc-card { min-height: 240px; }
+  .primary-svc-content { min-height: 240px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .cred-item { width: 50%; }
+}
+
 </style>
 </head>
 <body>
