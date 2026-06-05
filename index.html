@@ -2357,7 +2357,9 @@ footer {
 
   /* ── Testimonials ── */
   #testimonials .test-inner { padding: 56px 0 52px !important; }
-  .test-carousel { min-height: auto; padding: 0 16px; }
+  .test-carousel { min-height: auto; padding: 0 16px; display: block; }
+  .test-slide { position: relative; inset: auto; opacity: 0; display: none; transform: none; transition: opacity 0.45s ease; pointer-events: auto; }
+  .test-slide.active { opacity: 1; display: flex; }
   .test-quote { font-size: 16px; line-height: 1.68; }
   .test-nav { margin-top: 28px; }
 
