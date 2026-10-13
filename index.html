@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pacific Homes — Vancouver's Premier General Contractor</title>
-<meta name="description" content="Pacific Homes is Vancouver's premier general contractor specializing in custom homes, laneway houses, duplexes, multiplexes, and renovations across Metro Vancouver.">
+<title>Laneway, Duplex &amp; Multiplex Builder in Vancouver | Pacific Homes</title>
+<meta name="description" content="Pacific Homes builds laneway houses, duplexes, multiplexes and custom homes across Metro Vancouver. Licensed, insured, 20+ years. Book a free feasibility review.">
+<link rel="canonical" href="https://www.pacifichomesltd.ca/">
 <!-- Favicon -->
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -12,7 +13,7 @@
 <!-- Open Graph / social sharing -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.pacifichomesltd.ca/">
-<meta property="og:title" content="Pacific Homes — Vancouver's Premier General Contractor">
+<meta property="og:title" content="Laneway, Duplex &amp; Multiplex Builder in Vancouver | Pacific Homes">
 <meta property="og:description" content="Custom homes, laneway houses, duplexes, multiplexes, and renovations across Metro Vancouver. 20+ years of experience, licensed & insured.">
 <meta property="og:image" content="https://www.pacifichomesltd.ca/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -20,9 +21,41 @@
 
 <!-- Twitter card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pacific Homes — Vancouver's Premier General Contractor">
+<meta name="twitter:title" content="Laneway, Duplex &amp; Multiplex Builder in Vancouver | Pacific Homes">
 <meta name="twitter:description" content="Custom homes, laneway houses, duplexes, multiplexes, and renovations across Metro Vancouver.">
 <meta name="twitter:image" content="https://www.pacifichomesltd.ca/og-image.jpg">
+
+
+<!-- Structured data: helps Google and AI search understand the business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "@id": "https://www.pacifichomesltd.ca/#business",
+  "name": "Pacific Homes Ltd.",
+  "url": "https://www.pacifichomesltd.ca/",
+  "image": "https://www.pacifichomesltd.ca/og-image.jpg",
+  "telephone": "+1-604-773-6067",
+  "email": "info@pacifichomesltd.ca",
+  "description": "Licensed and insured Vancouver builder of laneway houses, duplexes, multiplexes (3 to 8 units under R1-1 zoning), custom homes and renovations, with 20+ years of experience and a free feasibility review.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "BC", "addressCountry": "CA" },
+  "areaServed": [{ "@type": "City", "name": "Vancouver" }, { "@type": "AdministrativeArea", "name": "Metro Vancouver" }],
+  "sameAs": ["https://www.instagram.com/pacifichomesltd/"],
+  "knowsAbout": ["Laneway houses", "Duplexes", "Multiplexes", "R1-1 zoning", "Bill 44", "Custom homes", "Home renovations"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Construction services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laneway house construction" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Duplex construction" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Multiplex construction (3 to 8 units)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom home building" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home renovations" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free feasibility review" } }
+    ]
+  }
+}
+</script>
 
 <!-- Preload LCP image (first hero slide) -->
 <link rel="preload" as="image" href="Project-images/R2351614_0.jpg" fetchpriority="high">
@@ -343,7 +376,7 @@ img { display: block; max-width: 100%; }
   color: rgba(255,255,255,0.6);
   margin-bottom: 14px;
 }
-#hero h1 {
+#hero .hero-brand {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(72px, 12vw, 158px);
   font-weight: 300;
@@ -1677,7 +1710,7 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
-  #hero h1 { font-size: 42px; }
+  #hero .hero-brand { font-size: 42px; }
   .hero-sub { font-size: 15px; }
 
   .cred-inner { flex-wrap: wrap; gap: 20px 0; padding: 0 24px; }
@@ -1719,7 +1752,7 @@ footer {
 }
 
 @media (max-width: 520px) {
-  #hero h1 { font-size: 34px; }
+  #hero .hero-brand { font-size: 34px; }
   .laneway-opener-text h2 { font-size: 34px; }
   .cred-item { width: 100%; }
   .gen-process-grid { grid-template-columns: 1fr; }
@@ -2298,11 +2331,11 @@ footer {
 
   /* ── Hero ── */
   #hero { min-height: 100svh; }
-  .hero-center-text h1 {
+  .hero-center-text .hero-brand {
     font-size: clamp(52px, 14vw, 80px);
     letter-spacing: 0.04em;
   }
-  .hero-eyebrow { font-size: 9.5px; letter-spacing: 0.22em; }
+  .hero-eyebrow { font-size: 9.5px; letter-spacing: 0.22em; line-height: 1.8; padding: 0 24px; }
   .hero-scroll { display: none; }
 
   /* ── Cred bar ── */
@@ -2397,7 +2430,7 @@ footer {
   /* Extra small screens */
   .container { padding: 0 16px; }
   .nav-inner { padding: 0 16px; }
-  .hero-center-text h1 { font-size: clamp(44px, 13vw, 68px); }
+  .hero-center-text .hero-brand { font-size: clamp(44px, 13vw, 68px); }
   .primary-svc-content { padding: 28px 24px; }
   .primary-svc-card { min-height: 240px; }
   .primary-svc-content { min-height: 240px; }
@@ -2449,8 +2482,8 @@ footer {
   <div class="hero-overlay"></div>
   <!-- Centered company name -->
   <div class="hero-center-text" id="heroContent">
-    <p class="hero-eyebrow">Vancouver General Contractor</p>
-    <h1>PACIFIC<br>HOMES</h1>
+    <h1 class="hero-eyebrow">Laneway, Duplex &amp; Multiplex Builder in Vancouver</h1>
+    <p class="hero-brand">PACIFIC<br>HOMES</p>
   </div>
   <!-- Scroll indicator -->
   <div class="hero-scroll">
@@ -2858,7 +2891,7 @@ footer {
   <div class="zoning-section">
     <div class="container">
       <p class="eyebrow fade-up" style="justify-content:center;margin-bottom:12px;">R1-1 Zoning at a Glance</p>
-      <h2 class="zoning-head fade-up">What your lot allows</h2>
+      <h2 class="zoning-head fade-up">What R1-1 zoning allows on your lot</h2>
       <div class="zoning-table-wrap fade-up">
         <table class="zoning-table">
           <thead>
@@ -2956,7 +2989,7 @@ footer {
   <div class="considerations-section">
     <div class="container">
       <p class="eyebrow fade-up" style="justify-content:center;margin-bottom:12px;">Important considerations. We'll guide you through them.</p>
-      <h2 class="considerations-head fade-up">Know before you build.</h2>
+      <h2 class="considerations-head fade-up">Know before you build a multiplex.</h2>
       <div class="considerations-grid">
         <div class="consideration-tile fade-up">
           <h4>City fees and levies</h4>
@@ -3370,7 +3403,7 @@ footer {
     </div>
     <div class="footer-bottom">
       <span>© 2025 Pacific Homes. All rights reserved.</span>
-      <span>Vancouver's Premier General Contractor</span>
+      <span>Laneway, duplex &amp; multiplex builder in Vancouver</span>
     </div>
   </div>
 </footer>
